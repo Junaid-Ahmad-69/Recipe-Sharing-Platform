@@ -1,0 +1,41 @@
+extends index
+block content
+    main.main
+        .card-container
+            each recipe in recipes
+                .card
+                    .card__header
+                        .card__picture
+                            .card__picture-overlay &nbsp;
+                            //img.card__picture-img(src= `img/tours/${recipe.imageCover}`, alt= `${recipe.name}`)
+                        h3.heading-tertirary
+                            span= recipe.name
+
+                    .card__details
+                        //h4.card__sub-heading= `${recipe.difficulty} ${recipe.duration}-day tour`
+                        //p.card__text= `${recipe.summary}`
+                        .card__data
+                            svg.card__icon
+                                use(xlink:href='img/icons.svg#icon-map-pin')
+                            //span= tour.startLocation.description
+                        .card__data
+                            svg.card__icon
+                                use(xlink:href='img/icons.svg#icon-calendar')
+                            //span= recipe.)
+                        .card__data
+                            svg.card__icon
+                                use(xlink:href='img/icons.svg#icon-flag')
+                            //span= `${tour.locations.length} stops`
+                        .card__data
+                            svg.card__icon
+                                use(xlink:href='img/icons.svg#icon-user')
+                            span= `${recipe.dietaryRestriction}`
+
+                    //.card__footer
+                    //    p
+                    //        span.card__footer-value= `$${recipe.price}`
+                    //        span.card__footer-text  per person
+                    //    p.card__ratings
+                    //        span.card__footer-value= `${recipe.ratingsAverage}`
+                    //        span.card__footer-text=  ` rating (${recipe.ratingsQuantity})`
+                    //    a.btn.btn--green.btn--small(href=`/tour/${recipe.slug}`) Details
