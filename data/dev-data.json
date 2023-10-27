@@ -6,7 +6,8 @@
     "cuisine": "pakistan",
     "dietaryRestriction": "vegetarian",
     "time": 1,
-    "description": "If you are a fan of keema, then you would surely like this biryani recipe. Made with basmati rice, minced mutton, yoghurt and a melange of whole spices, this biryani recipe is to die for! "
+    "description": "If you are a fan of keema, then you would surely like this biryani recipe. Made with basmati rice, minced mutton, yoghurt and a melange of whole spices, this biryani recipe is to die for! creamy pakistan biryani is top cutting-edge of the biryani.",
+    "image": "biryani.jpg"
   },
   {
     "name": "kabuli Pulao",
@@ -15,7 +16,8 @@
     "cuisine": "pakistan",
     "dietaryRestriction": "vegetarian",
     "time": 2,
-    "description": "Kabuli Pulao is an Pakistani delicacy which is made of mutton and rice. The Pulao is rich in flavour due to the dry fruits that are added on top. The mutton stock added while cooking the rice also enhances its taste. "
+    "description": "Kabuli Pulao is an Pakistani delicacy which is made of mutton and rice. The Pulao is rich in flavour due to the dry fruits that are added on top. The mutton stock added while cooking the rice also enhances its taste  a vegan diet and anyone looking.",
+    "image": "kabli.jpg"
   },
   {
     "name": " vegetable Pulao",
@@ -24,7 +26,8 @@
     "cuisine": "pakistan",
     "dietaryRestriction": "vegetarian",
     "time": 1.5,
-    "description": "Vegetable Pulao is a common dish served during festive occasions and celebrations in Pakistan. It's a staple at weddings, Eid celebrations, and other important events. Its vibrant appearance and delicious taste make it a favorite for special occasions."
+    "description": "Vegetable Pulao is a common dish served during festive occasions and celebrations in Pakistan. It's a staple at weddings, Eid celebrations, and other important events. Its vibrant appearance and delicious taste make it a favorite for special occasions.",
+    "image": "vegetable.jpg"
   },
   {
     "name": " chocolate Chip Cookies",
@@ -33,7 +36,8 @@
     "cuisine": "america",
     "dietaryRestriction": "gluten free",
     "time": 1,
-    "description": "Classic Homemade Chocolate Chip Cookies are a timeless and cherished American treat. These cookies are adored for their soft and chewy texture, golden-brown edges, and a perfect balance of sweet, melty chocolate chips."
+    "description": "Classic Homemade Chocolate Chip Cookies are a timeless and cherished American treat. These cookies are adored for their soft and chewy texture, golden-brown edges, and a perfect balance of sweet, melty chocolate chips.",
+    "image": "chocolate.jpg"
   },
   {
     "name": "nan khatai",
@@ -42,7 +46,8 @@
     "cuisine": "pakistan",
     "dietaryRestriction": "vegetarian",
     "time": 2,
-    "description": "Nan Khatai is a beloved Pakistani cookie known for its melt-in-the-mouth texture and delightful blend of aromatic spices. These eggless cookies are made with a combination of all-purpose flour, ghee, and sugar, along with a hint of cardamom powder for a unique and flavorful experience. Nan Khatai is a delightful accompaniment to tea and a cherished treat during festive occasions."
+    "description": "Nan Khatai is a beloved Pakistani cookie known for its melt-in-the-mouth texture and delightful blend of aromatic spices. These eggless cookies are made with a combination of all-purpose flour, ghee, and sugar, along with a hint.",
+    "image": "nan.jpg"
   },
   {
     "name": "pasta carbonara",
@@ -51,7 +56,8 @@
     "cuisine": "italian",
     "dietaryRestriction": "fast food",
     "time": 0.5,
-    "description": "Pasta Carbonara is a classic Italian dish known for its rich and creamy sauce. It's made with simple ingredientss like eggs, cheese, and pancetta. This quick and delicious pasta is perfect for a weeknight dinner."
+    "description": "Pasta Carbonara is a classic Italian dish known for its rich and creamy sauce. It's made with simple ingredientss like eggs, cheese, and pancetta. This quick and delicious pasta is perfect for a weeknight dinner creamy Indian drink made with ripe mangoes, yogurt, and a touch of cardamom.",
+    "image": "pasta.jpg"
   },
   {
     "name": "chicken tikka masala",
@@ -60,7 +66,8 @@
     "cuisine": "india",
     "dietaryRestriction": "fast food",
     "time": 1.5,
-    "description": "Chicken Tikka Masala is a popular Indian dish with tender pieces of chicken in a creamy tomato-based sauce. It's rich, flavorful, and perfect when served with naan or rice."
+    "description": "Chicken Tikka Masala is a popular Indian dish with tender pieces of chicken in a creamy tomato-based sauce. It's rich, flavorful, and perfect when served with naan or rice. This quick and delicious pasta is perfect for a weeknight dinner creamy Indian drink made with ripe mangoes, yogurt, and a touch of cardamom",
+    "image": "tikka.jpg"
   },
   {
     "name": "gazpacho",
@@ -69,7 +76,8 @@
     "cuisine": "spanish",
     "dietaryRestriction": "vegan",
     "time": 0.5,
-    "description": "Gazpacho is a refreshing Spanish cold soup made with fresh vegetables. It's perfect for hot summer days and is loaded with vitamins and flavor."
+    "description": "Gazpacho is a delightful and iconic dish in Spanish cuisine, renowned for its ability to offer a cool and revitalizing escape on scorching summer daysGazpacho is a delightful and iconic dish in Spanish cuisine, renowned for its ability to offer a cool and revitalizing escape on scorching summer days.",
+    "image": "gazpacho.jpg"
   },
   {
     "name": "sushi Rolls",
@@ -78,7 +86,8 @@
     "cuisine": "japanese",
     "dietaryRestriction": "vegan",
     "time": 1,
-    "description": "Sushi Rolls are a popular Japanese dish featuring vinegared rice, fresh fish, and vegetables rolled in nori sheets. Sushi is not only delicious but also an artful culinary experience."
+    "description": "Sushi Rolls are a popular Japanese dish featuring vinegared rice, fresh fish, and vegetables rolled in nori sheets. Sushi is not only delicious but also an artful culinary experience for those following a vegan diet and anyone looking for a satisfying and meat-free meal.",
+    "image": "sushi.jpg"
   },
   {
     "name": "vegan lentil",
@@ -87,7 +96,8 @@
     "cuisine": "pakistan",
     "dietaryRestriction": "vegan",
     "time": 1,
-    "description": "This Vegan Lentil and Vegetable Curry is a flavorful and nutritious plant-based meal. It's made with hearty lentils and a variety of vegetables in a rich, aromatic curry sauce. It's perfect for those following a vegan diet and anyone looking for a satisfying and meat-free meal."
+    "description": "This Vegan Lentil and Vegetable Curry is a flavorful and nutritious plant-based meal. It's made with hearty lentils and a variety of vegetables in a rich, aromatic curry sauce. It's perfect for those following a vegan diet and anyone looking for a satisfying and meat-free meal.",
+    "image": "vegan.jpg"
   },
   {
     "name": "spaghetti bolognese",
@@ -96,7 +106,8 @@
     "cuisine": "italian",
     "dietaryRestriction": "fast food",
     "time": 2,
-    "description": "Spaghetti Bolognese is a classic Italian pasta dish with a rich and meaty tomato sauce. It's a hearty and satisfying meal that's loved around the world."
+    "description": "Spaghetti Bolognese is a classic Italian pasta dish with a rich and meaty tomato sauce. It's a hearty and satisfying meal that's loved around the world of cardamom powder for a unique and flavorful experience spaghetti bolognese is a delightful accompaniment to tea and a cherished.",
+    "image": "spaghatti.jpg"
   },
   {
     "name": "mango lassi",
@@ -105,7 +116,8 @@
     "cuisine": "india",
     "dietaryRestriction": "vegetarian",
     "time": 0.5,
-    "description": "Mango Lassi is a sweet and creamy Indian drink made with ripe mangoes, yogurt, and a touch of cardamom. It's a perfect refresher, especially during hot summer days."
+    "description": "Mango Lassi is a sweet and creamy Indian drink made with ripe mangoes, yogurt, and a touch of cardamom. It's a perfect refresher, especially during hot summer days or a unique and flavorful experience mango lassi is a happy mood accompaniment to shake to drink.",
+    "image": "mango.jpg"
   },
   {
     "name": "beef stroganoff",
@@ -114,6 +126,7 @@
     "cuisine": "russian",
     "dietaryRestriction": " non veg",
     "time": 2,
-    "description": "Beef Stroganoff is a classic Russian dish with tender strips of beef in a creamy mushroom sauce. It's traditionally served over egg noodles or rice."
+    "description": "Beef Stroganoff is a classic Russian dish with tender strips of beef in a creamy mushroom sauce. It's traditionally served over egg noodles or rice for those following a vegan diet and anyone looking for a satisfying and meat-free meal creamy Indian drink made with ripe mangoes.",
+    "image": "beef.jpg"
   }
 ]

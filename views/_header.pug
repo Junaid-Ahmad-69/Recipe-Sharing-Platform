@@ -1,15 +1,15 @@
 header.header
     .header__logo
-        a.nav__el(href='#')
-            img(src='/img/recipe-logo.png' alt='Recipes logo')
-
-
-
-        //nav.nav.nav--user
-        //a.nav__el(href='#') My Booking
-        //a.nav__el(href='#')
-        //    img.nav__user-img(src='img/user.jpg' alt='user photo')
-        //    span Doe
-    <div>
-        button.nav__el Log in
-        button.nav__el.nav__el--cta Sign Up
+        if user
+            a.nav__el.header-nav-logo(href='/recipes')
+                img(src='/img/recipe-logo.png', alt='Recipes logo')
+            .post-item_container
+                a.post-recipe.btn.btn--green(href='/recipe')
+                    svg.card__icon.card__icon_post
+                        use(xlink:href='img/icons.svg#icon-send')
+                        span Post a Recipe
+                a.btn.btn--green.btn-logout(href="/") Log out
+        else
+            .div
+                a.nav__el.nav__el--cta(href="/signup") Sign Up
+                a.nav__el(href="/") Log in

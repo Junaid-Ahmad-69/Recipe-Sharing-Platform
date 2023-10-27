@@ -1,0 +1,22 @@
+extends index
+
+block content
+    main.main
+        .login-form
+            h2.heading-secondary.ma-bt-lg Sign up
+            form.form
+                .form__group
+                    label.form__label(for='signname') Name
+                    input#signname.form__input(type='text', placeholder='John Doe', required)
+                .form__group
+                    label.form__label(for='signemail') Email address
+                    input#signemail.form__input(type='email', placeholder='you@example.com', required)
+                .form__group.ma-bt-md
+                    label.form__label(for='signupassword') Password
+                    input#signupassword.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                .form__group
+                    label.form__label(for='signconfirm') Confirm Password
+                    input#signconfirm.form__input(type='password', placeholder='••••••••', required)
+
+                .form__group
+                    button.btn.btn--green.btn-signup sign up

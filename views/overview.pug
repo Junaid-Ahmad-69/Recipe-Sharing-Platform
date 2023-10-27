@@ -1,41 +1,48 @@
 extends index
 block content
+    section.section-header
+        .header__hero
+            .header__hero-overlay &nbsp;
+            img.header__hero-img(src= `/img/banner.jpg`)
+
+        .heading-box
+            h1.heading-primary
+                span Welcome to Chop Chop Family
+
     main.main
         .card-container
             each recipe in recipes
                 .card
                     .card__header
                         .card__picture
-                            .card__picture-overlay &nbsp;
-                            //img.card__picture-img(src= `img/tours/${recipe.imageCover}`, alt= `${recipe.name}`)
+                            img.card__picture-img(src= `${recipe.image}`, alt= `${recipe.name}`)
                         h3.heading-tertirary
                             span= recipe.name
 
                     .card__details
-                        //h4.card__sub-heading= `${recipe.difficulty} ${recipe.duration}-day tour`
-                        //p.card__text= `${recipe.summary}`
+                        //h4.card__sub-heading= `-day tour`
+                        p.card__text= `${recipe.description}`
                         .card__data
                             svg.card__icon
-                                use(xlink:href='img/icons.svg#icon-map-pin')
-                            //span= tour.startLocation.description
+                                use(xlink:href='img/icons.svg#icon-clock')
+                            span= `${recipe.time} hr`
                         .card__data
                             svg.card__icon
-                                use(xlink:href='img/icons.svg#icon-calendar')
-                            //span= recipe.)
+                                use(xlink:href='img/icons.svg#icon-clipboard')
+                            span= `${recipe.category}`
                         .card__data
                             svg.card__icon
                                 use(xlink:href='img/icons.svg#icon-flag')
-                            //span= `${tour.locations.length} stops`
+                            span= `${recipe.cuisine}`
                         .card__data
                             svg.card__icon
-                                use(xlink:href='img/icons.svg#icon-user')
+                                use(xlink:href='img/icons.svg#icon-tag')
                             span= `${recipe.dietaryRestriction}`
 
-                    //.card__footer
-                    //    p
-                    //        span.card__footer-value= `$${recipe.price}`
-                    //        span.card__footer-text  per person
-                    //    p.card__ratings
-                    //        span.card__footer-value= `${recipe.ratingsAverage}`
-                    //        span.card__footer-text=  ` rating (${recipe.ratingsQuantity})`
-                    //    a.btn.btn--green.btn--small(href=`/tour/${recipe.slug}`) Details
+                    .card__footer
+                        p.card__ratings
+                            -const created = recipe.createdAt.toLocaleDateString('en-us', {month: "long", day: "numeric"})
+                            // -const updated = recipe?.updatedAt.toLocaleDateString('en-us', {month: "long", day: "numeric"})
+                            span.card__footer-value= `Posted: ${created}`
+                            span.card__footer-text updated At
+                        a.btn.btn--green.btn--small.btn-slug(href=`recipes/${recipe.slug}`) Details

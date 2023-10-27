@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const slugify = require('slugify');
 
 
 const recipeSchema = new mongoose.Schema({
@@ -7,6 +8,7 @@ const recipeSchema = new mongoose.Schema({
         trim: true,
         required: [true, 'A recipe must have a name'],
     },
+    slug: String,
     /*Flour, eggs, and sugar are the main ingredients in the cake*/
     ingredients: {
         type: String,
@@ -25,9 +27,9 @@ const recipeSchema = new mongoose.Schema({
     /* A dietary restriction mean its vegetarian or non-vegetarian */
     dietaryRestriction: {
         type: String,
-        required: [true, 'A recipe must have a serve number for user'],
+        required: [true, 'A recipe must have a dietary restriction'],
     },
-    Time: Number,
+    time: Number,
     description: String,
     image: String,
     createdAt: {
@@ -36,6 +38,10 @@ const recipeSchema = new mongoose.Schema({
     }
     // updatedAt: Date,
 })
-
+//Define the middle-ware for slug run before savn and create the new api for recipes
+recipeSchema.pre('save', function (next) {
+    this.slug = slugify(this.name, {lower: true})
+    next();
+});
 const recipe = mongoose.model('recipe', recipeSchema)
 module.exports = recipe;
