@@ -34,6 +34,13 @@ const userSchema = new mongoose.Schema({
     },
 })
 
+
+/* If user make an account using sign up and the go to login we make a method to first decrypt the password of user and the match to db  */
+
+userSchema.methods.correctPassword = async function (userPassword, dbPassword) {
+    return await bcrypt.compare(userPassword, dbPassword)
+}
+
 /*Bcrypt the password and remove the confirm password before dave to db using middleware*/
 
 userSchema.pre('save', async function (next) {
@@ -42,6 +49,7 @@ userSchema.pre('save', async function (next) {
     // delete or hide the confirm-password from db
     this.confirmPassword = undefined;
 })
+
 
 
 const user = mongoose.model('user', userSchema);

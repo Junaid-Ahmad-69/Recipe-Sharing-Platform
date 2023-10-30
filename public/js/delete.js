@@ -1,4 +1,3 @@
-console.log(document.querySelectorAll('.btn-delete'))
 document.querySelectorAll(".btn-delete").forEach((item) => {
     item.addEventListener('click', async function () {
         const id = item.getAttribute("id")

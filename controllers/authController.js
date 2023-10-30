@@ -35,7 +35,6 @@ exports.signup = async (req, res) => {
 exports.logIn = async (req, res, next) => {
     try {
         const {email, password} = req.body;
-        const users = await User.findOne({email, password});
 
         /* 1) Check if there is no User Email & Password */
         if (!email || !password) return next(
@@ -44,14 +43,21 @@ exports.logIn = async (req, res, next) => {
                 message: "Please provide email and password"
             })
         )
+        const user = await User.findOne({email}).select("+password");
+        if (!user || !await user.correctPassword(password, user.password))
+            return next(res.status(401).json({
+                    status: 'error',
+                    message: 'Invalid email or password'
+                })
+            )
         /* 2) Check if there is no user exit in DB */
-        if (!users) return next(
+        if (!user) return next(
             res.status(400).json({
                 status: "fail",
                 message: "No user found"
             })
         );
-        const token = signToken(users._id);
+        const token = signToken(user._id);
         const cookieOptions = {
             expires: new Date(Date.now() + process.env.JWT_EXPIRE_COOKIES_IN * 24 * 60 * 60 * 1000),
             httpOnly: true,
