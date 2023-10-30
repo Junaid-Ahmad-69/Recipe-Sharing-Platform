@@ -10,7 +10,7 @@ document.querySelector('.btn-search')?.addEventListener("click", async function 
     if (dietaryRestriction) params.append('dietaryRestriction', dietaryRestriction);
     const query = params.toString();
     const currentURL = window.location.href;
-
+    if (!query) return
     if (window.location.href.includes("?")) {
         const newUrl = currentURL + (query ? `&${query}` : '');
         window.location.href = newUrl;
