@@ -25,6 +25,7 @@ const postRecipe = async (name, ingredients, category, cuisine, dietaryRestricti
             throw new Error('Failed to fetch data');
         }
     } catch (error) {
+        alert('Please upload image less the 5kb.')
         console.error(error.message);
     }
 }
