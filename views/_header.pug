@@ -1,15 +1,15 @@
 header.header
     .header__logo
         if user
-            a.nav__el.header-nav-logo(href='/recipes')
+            a.nav__el.header-nav-logo(href='/recipe')
                 img(src='/img/recipe-logo.png', alt='Recipes logo')
             .post-item_container
-                a.post-recipe.btn.btn--green(href='/recipe')
+                a.post-recipe.btn.btn--green(href='/recipes')
                     svg.card__icon.card__icon_post
                         use(xlink:href='img/icons.svg#icon-send')
                         span Post a Recipe
-                a.btn.btn--green.btn-logout(href="/") Log out
-        else
+                a.btn.btn--green.btn-logout Log out
+        if !user
             .div
                 a.nav__el.nav__el--cta(href="/signup") Sign Up
                 a.nav__el(href="/") Log in

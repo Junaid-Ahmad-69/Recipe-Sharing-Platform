@@ -4,7 +4,7 @@ const app = express();
 const cookieParser = require('cookie-parser');
 
 // 1) Middleware Application
-app.use(express.json({limit: "30kb"}));
+app.use(express.json());
 
 // 2) Read the static files
 app.use(express.static(path.join(__dirname, "public")));

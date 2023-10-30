@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 const slugify = require('slugify');
 
-
 const recipeSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -31,17 +30,22 @@ const recipeSchema = new mongoose.Schema({
     },
     time: Number,
     description: String,
-    image: String,
+    image: {
+        type: String,
+        required: [true, 'Please upload image']
+    },
     createdAt: {
         type: Date,
         default: Date.now(),
-    }
+    },
+    userData: String,
     // updatedAt: Date,
-})
+});
 //Define the middle-ware for slug run before savn and create the new api for recipes
 recipeSchema.pre('save', function (next) {
-    this.slug = slugify(this.name, {lower: true})
+    this.slug = slugify(this.name, {lower: true});
     next();
 });
+
 const recipe = mongoose.model('recipe', recipeSchema)
 module.exports = recipe;

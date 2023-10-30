@@ -1,7 +1,7 @@
 
 //Sign up
 const userSignup = async (name, email, password, confirmPassword) => {
-    await fetch('http://127.0.0.1:4000/api/v1/user/signup', {
+    await fetch('/api/v1/user/signup', {
         headers: {
             'Content-Type': 'application/json',
         },
@@ -10,7 +10,7 @@ const userSignup = async (name, email, password, confirmPassword) => {
     })
         .then(res => {
             if (res.status === 201) {
-                window.location.replace("/recipes");
+                window.location.replace("/recipe");
                 return res.json();
 
             } else {

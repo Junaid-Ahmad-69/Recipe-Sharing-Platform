@@ -29,7 +29,7 @@ block content
                         input#recipe_time.form__input(type='number')
 
                     .form__group.form-item.form-item__field
-                        label.form__label(for='recipe_dietary') Recipe Dietary Restriction
+                        label.form__label(for='recipe_dietary') Recipe Dietary Restriction *
                         input#recipe_dietary.form__input(type='text' placeholder='Vegetarian, fast food, gluten free, vegan')
 
                 .post-container
@@ -40,12 +40,12 @@ block content
 
                 .post-container
                     .form__group.form-item.form-item__field.upload
-                        label.form__label(for='recipe_image') Recipe Image
+                        label.form__label(for='recipe_image') Recipe Image *
                         input#recipe_image.form__input(type='file')
 
                 .post-container.post-container__items
                     .form__group.form-item.post-container
-                        button.btn.btn--green.btn-post(type="button") Post Recipe 🍜
+                        a.btn.btn--green.btn-post Post Recipe 🍜
 
                     .form__group.form-item
                         a.nav__el.nav__el--cta(href="/recipes") Cancel

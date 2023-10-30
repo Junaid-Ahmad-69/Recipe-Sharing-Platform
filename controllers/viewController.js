@@ -2,7 +2,7 @@ const Recipe = require("../models/recipeModel")
 /*Find all recipes*/
 exports.getIndex = async (req, res) => {
     try {
-        const recipes = await Recipe.find();
+        const recipes = await Recipe.find(req.query);
         res.status(200).render(`overview`, {title: 'Bring Out The Foodie In You', recipes})
 
     } catch (err) {

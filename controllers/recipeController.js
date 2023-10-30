@@ -22,11 +22,13 @@ exports.getAllRecipe = async (req, res) => {
 // Create Recipe
 exports.createRecipe = async (req, res) => {
     try {
-        const recipe = await Recipe.create(req.body);
+        const currentUserId = res.userId._id;
+        const newRecipe = new Recipe({...req.body, userData: currentUserId});
+        const recipe = await Recipe.create(newRecipe);
         res.status(201).json({
             status: "success",
             data: {
-                recipe
+                recipe,
             }
         })
     } catch (error) {
@@ -73,7 +75,9 @@ exports.updateRecipe = async (req, res) => {
 // Delete Recipe
 exports.deleteRecipe = async (req, res) => {
     try {
-        const recipe = await Recipe.findOneAndDelete(req.params.id);
+        const recipe = await Recipe.findOneAndDelete({
+            _id: req.params.id
+        });
         res.status(200).json({
             status: "success",
             data: {

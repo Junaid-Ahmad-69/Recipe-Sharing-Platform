@@ -93,14 +93,14 @@ exports.protect = async (req, res, next) => {
     try {
         if (req.headers.authorization && req.headers.authorization.startsWith("Bearer")) {
             token = req.headers.authorization.split(" ")[1];
-        } else if (req.cookies.jwt) {
+        }
+        if (req.cookies.jwt) {
             token = req.cookies.jwt
         }
         if (!token) return res.status(401).json({
             status: "fail",
             message: "You are not logged in Please logged in again !"
         })
-        next();
     } catch (error) {
         res.status(500).json({
             status: "fail",
@@ -139,8 +139,11 @@ exports.isLoggedIn = async (req, res, next) => {
             return next()
         }
         // Use the locals method to use the current exited db user to use in pug files
-        res.locals.user = loginUser
-        return next()
+        res.locals.user = loginUser;
+        res.userId = loginUser;
+        res.userPub = loginUser._id;
+
+        return next();
     }
-    next()
+    next();
 }

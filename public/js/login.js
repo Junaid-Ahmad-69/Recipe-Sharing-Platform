@@ -1,5 +1,5 @@
 const userLogin = async (email, password) => {
-    await fetch('http://127.0.0.1:4000/api/v1/user/login', {
+    await fetch('/api/v1/user/login', {
         headers: {
             'Content-Type': 'application/json',
         },
@@ -8,7 +8,7 @@ const userLogin = async (email, password) => {
     })
         .then(res => {
             if (res.status === 201) {
-                window.location.replace("/recipes");
+                window.location.replace("/recipe");
                 return res.json();
 
             } else {

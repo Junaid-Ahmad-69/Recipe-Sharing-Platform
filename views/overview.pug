@@ -1,4 +1,6 @@
 extends index
+
+
 block content
     section.section-header
         .header__hero
@@ -8,11 +10,29 @@ block content
         .heading-box
             h1.heading-primary
                 span Welcome to Chop Chop Family
-
     main.main
+
+        form.query__form
+            .form__group
+                label.form__label(for='name') Name
+                input#name.form__input.form_query(type='text', placeholder='biryani, fish, cake..... ')
+            .form__group
+                label.form__label(for='cuisine') Cuisine
+                input#cuisine.form__input.form_query(type='text', placeholder='pakistan, spanish ... ')
+
+            .form__group
+                label.form__label(for='category') Category
+                input#category.form__input.form_query(type='text', placeholder='pasta, cookies, desserts...')
+
+            .form__group.form-item__field
+                label.form__label(for='dietaryRestriction') Dietary Restriction
+                input#dietaryRestriction.form__input.form_query(type='text', placeholder='gluten free, fast food, cookies..')
+
+            a.btn.btn--green.btn-search Search...
+
         .card-container
             each recipe in recipes
-                .card
+                .card.cards-data-id(data-id = `${recipe.id}`)
                     .card__header
                         .card__picture
                             img.card__picture-img(src= `${recipe.image}`, alt= `${recipe.name}`)
@@ -20,7 +40,6 @@ block content
                             span= recipe.name
 
                     .card__details
-                        //h4.card__sub-heading= `-day tour`
                         p.card__text= `${recipe.description}`
                         .card__data
                             svg.card__icon
@@ -44,5 +63,12 @@ block content
                             -const created = recipe.createdAt.toLocaleDateString('en-us', {month: "long", day: "numeric"})
                             // -const updated = recipe?.updatedAt.toLocaleDateString('en-us', {month: "long", day: "numeric"})
                             span.card__footer-value= `Posted: ${created}`
-                            span.card__footer-text updated At
+
+                             - const newData = user._id == recipe.userData
+                             - const id = recipe.id
+                        if newData
+                            .card__data
+                                a.btn-delete(id = id)
+                                    svg.card__icon.action_circle
+                                        use(xlink:href='img/icons.svg#icon-trash')
                         a.btn.btn--green.btn--small.btn-slug(href=`recipes/${recipe.slug}`) Details
