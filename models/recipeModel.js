@@ -39,13 +39,20 @@ const recipeSchema = new mongoose.Schema({
         default: Date.now(),
     },
     userData: String,
-    // updatedAt: Date,
+    updatedAt: Date,
 });
 //Define the middle-ware for slug run before savn and create the new api for recipes
 recipeSchema.pre('save', function (next) {
     this.slug = slugify(this.name, {lower: true});
     next();
 });
+
+recipeSchema.pre('save', function (next) {
+    this.slug = slugify(this.name, {lower: true});
+    next();
+});
+
+
 
 const recipe = mongoose.model('recipe', recipeSchema)
 module.exports = recipe;

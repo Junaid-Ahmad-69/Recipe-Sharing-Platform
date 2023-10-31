@@ -57,8 +57,12 @@ exports.getRecipe = async (req, res) => {
 }
 // Update Recipe
 exports.updateRecipe = async (req, res) => {
+    const updateDate = {...req.body, updatedAt: Date.now()}
     try {
-        const recipe = await Recipe.findByIdAndUpdate(req.params.id, req.body, {new: true, runValidators: true});
+        const recipe = await Recipe.findByIdAndUpdate(req.params.id, updateDate, {
+            new: true,
+            runValidators: true
+        });
         res.status(201).json({
             status: "success",
             data: {

@@ -46,11 +46,20 @@ exports.getRecipeBySlug = async (req, res) => {
 }
 
 /* Post a Recipe */
-exports.postRecipe = async  (req, res) => {
+exports.postRecipe = async (req, res) => {
     try {
         res.status(200).render('post-recipe', {title: `Post your Recipe`})
     } catch (err) {
         console.log(err.message)
     }
 
+}
+
+exports.editRecipe = async (req, res) => {
+    try {
+        const recipe = await Recipe.findOne({slug: req.params.slug});
+        res.status(200).render('edit-recipe', {title: `Edit ${recipe.name} Recipe`, recipe})
+    } catch (err) {
+        console.log(err.message)
+    }
 }

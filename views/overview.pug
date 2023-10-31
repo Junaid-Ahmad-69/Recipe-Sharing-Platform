@@ -60,15 +60,23 @@ block content
 
                     .card__footer
                         p.card__ratings
-                            -const created = recipe.createdAt.toLocaleDateString('en-us', {month: "long", day: "numeric"})
-                            // -const updated = recipe?.updatedAt.toLocaleDateString('en-us', {month: "long", day: "numeric"})
+                            -const created = recipe?.createdAt.toLocaleDateString('en-us', {month: "long", day: "numeric"})
                             span.card__footer-value= `Posted: ${created}`
+                            - const updated = recipe?.updatedAt?.toLocaleDateString('en-US', { month: "long", day: "numeric" })
+                            if updated
+                                span= `Updated At: ${updated}`
 
-                             - const newData = user._id == recipe.userData
+
+
+                            - const newData = user._id == recipe.userData
                              - const id = recipe.id
                         if newData
                             .card__data
                                 a.btn-delete(id = id)
                                     svg.card__icon.action_circle
                                         use(xlink:href='img/icons.svg#icon-trash')
+
+                                a.btn-edit(href=`/edit/${recipe.slug}`)
+                                    svg.card__icon.action_circle
+                                        use(xlink:href='img/icons.svg#icon-edit')
                         a.btn.btn--green.btn--small.btn-slug(href=`recipes/${recipe.slug}`) Details

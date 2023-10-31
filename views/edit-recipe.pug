@@ -1,0 +1,56 @@
+extends index
+block content
+    main.main
+        .login-form.login-post
+            h2.heading-secondary.ma-bt-lg Edit a recipe
+            form.form
+
+                .post-container
+                    .form__group.form-item
+                        label.form__label(for='recipe_name') Recipe Name *
+                        input#recipe_name.form__input(type='text', placeholder='Pasta', value=`${recipe.name}` required)
+
+                    .form__group.form-item.form-item__field
+                        label.form__label(for='recipe_ingredients') Recipe Ingredients *
+                        input#recipe_ingredients.form__input(type='text', placeholder='Cardamom powder, rice, minced, cumin....', value=`${recipe.ingredients}` required)
+
+                .post-container
+                    .form__group.ma-bt-md.form-item
+                        label.form__label(for='recipe_category') Recipe Category *
+                        input#recipe_category.form__input(type='text', placeholder='Desserts, cookies, biryani, pasta', value=`${recipe.category}` required)
+
+                    .form__group.form-item.form-item__field
+                        label.form__label(for='recipe_cuisine') Recipe Cuisine *
+                        input#recipe_cuisine.form__input(type='text', placeholder='Pakistan, spanish, japanese', value=`${recipe.cuisine}` required)
+
+                .post-container
+                    .form__group.ma-bt-md.form-item
+                        label.form__label(for='recipe_time') Recipe Time (optional)
+                        input#recipe_time.form__input(type='number' value=`${recipe.time}`)
+
+                    .form__group.form-item.form-item__field
+                        label.form__label(for='recipe_dietary') Recipe Dietary Restriction *
+                        input#recipe_dietary.form__input(type='text' placeholder='Vegetarian, fast food, gluten free, vegan' value=`${recipe.dietaryRestriction}`)
+
+                .post-container
+                    .form__group.form-item
+                        label.form__label(for='recipe_description') Recipe Description (optional)
+                        textarea#recipe_description.form__input(rows=10, cols=10) #{recipe.description}
+
+
+                .post-container
+                    .form__group.form-item.form-item__field-data
+                        img.image-old(src= `${recipe.image}`)
+
+                .post-container
+                    .form__group.form-item.form-item__field.upload
+                        label.form__label(for='recipe_image') Recipe Image (less then 5kb) *  (if you select no image then previous image will display)
+                        input#recipe_image.form__input(type='file')
+
+                .post-container.post-container__items
+                    .form__group.form-item.post-container
+                        a.btn.btn--green.btn-update(id = recipe.id) Update Recipe 🍜
+
+                    .form__group.form-item
+                        a.nav__el.nav__el--cta(href="/recipe") Cancel
+
